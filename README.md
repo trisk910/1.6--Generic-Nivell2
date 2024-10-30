@@ -14,3 +14,13 @@ Exemple: un objecte de la classe Persona, un String i un tipus primitiu.
 
 D’aquesta manera has comprovat que se li pot passar qualsevol tipus de paràmetre i en qualsevol ordre.
 
+#Nivell 2
+
+- Exercici 1
+  
+Modifica l'exercici anterior de manera que un dels arguments del mètode genèric no sigui genèric.
+
+- Exercici 2
+  
+Modifica l'apartat anterior de manera que els arguments del mètode genèric siguin una llista d'arguments de variable indefinida.
+
