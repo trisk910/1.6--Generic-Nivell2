@@ -21,8 +21,8 @@ public class MainLevel1 {
         int number = 22;
 
         GenericMethods gm = new GenericMethods();
-        gm.printArguments(persona, text, number);
-        gm.printArguments(text, number, persona);
-        gm.printArguments(number, persona, text);
+        gm.genericFunction(persona, text, number);
+        gm.genericFunction(text, number, persona);
+        gm.genericFunction(number, persona, text);
     }
 }

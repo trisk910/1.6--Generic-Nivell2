@@ -1,28 +1,32 @@
 package org.example.Level2;
 
-import org.example.Level1.Bussiness.GenericMethods;
-import org.example.Level1.Bussiness.NoGenericMethods;
 import org.example.Level1.Bussiness.Persona;
+import org.example.Level2.Bussiness.GenericMethodsLevel2;
+import org.example.Level2.Bussiness.VarListGenericMethod;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainLevel2 {
     public static void main(String[] args) {
         System.out.println("----------Ex1----------");
-        NoGenericMethods obj1 = new NoGenericMethods(1, 2, 3);
-        NoGenericMethods obj2 = new NoGenericMethods(3, 1, 2);
-        NoGenericMethods obj3 = new NoGenericMethods(2, 3, 1);
+        Persona persona = new Persona("Pepito", "Palotes", 50);
+        int number = 42;
+        String text = "hola";
 
-        System.out.println("Objecte 1: " + obj1.getValue1() + ", " + obj1.getValue2() + ", " + obj1.getValue3());
-        System.out.println("Objecte 2: " + obj2.getValue1() + ", " + obj2.getValue2() + ", " + obj2.getValue3());
-        System.out.println("Objecte 3: " + obj3.getValue1() + ", " + obj3.getValue2() + ", " + obj3.getValue3());
+        GenericMethodsLevel2 gm = new GenericMethodsLevel2();
+        gm.newGenericFunction(persona, number, text);
 
         System.out.println("----------Ex2----------");
-        Persona persona = new Persona("Pepito", "Palotes", 50);
-        String text = "Hola";
-        int number = 22;
-
-        GenericMethods gm = new GenericMethods();
-        gm.printArguments(persona, text, number);
-        gm.printArguments(text, number, persona);
-        gm.printArguments(number, persona, text);
+        VarListGenericMethod nvl = new VarListGenericMethod();
+        ArrayList<String> sList = new ArrayList<>();
+        sList.add("String 1");
+        sList.add("String 2");
+        sList.add("String 3");
+        List<Integer> intList = new ArrayList<>();
+        intList.add(1);
+        intList.add(2);
+        intList.add(3);
+        nvl.genVarList(persona, number, text,sList,intList);
     }
 }
